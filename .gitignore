@@ -1,0 +1,18 @@
+# Entornos virtuales
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Variables de entorno
+.env
+
+# Modelos (Muy pesados)
+data/models/*.gguf
+
+# Datos procesados y de salida (Ignorar o versionar dependiendo de la política)
+# data/processed/
+# data/output/
+
+# Base de datos vectorial persistida
+data/processed/*.pkl

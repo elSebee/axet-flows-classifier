@@ -1,0 +1,1314 @@
+[
+	{
+		"code": "AUDIT",
+		"displayName": "Audit",
+		"description": "Evaluation of organizational processes and systems to ensure adherence to standards, identify areas of improvement, and maintain compliance with legal and regulatory obligations.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0610-FLOW-001",
+				"useCaseCode": "UC-0610",
+				"displayName": "Agentic AI vs Traditional AI vs RPA Comparator",
+				"description": "Provides structured comparison across automation technologies with selection guidance and risk-benefit profile.",
+				"enabled": true,
+				"hoursSaved": 4,
+				"automation": 0.67,
+				"isAi": true
+			},
+			{
+				"code": "UC-0614-FLOW-001",
+				"useCaseCode": "UC-0614",
+				"displayName": "Agentic Orchestration & Deployment Architect",
+				"description": "Designs swim lanes for agent orchestration, system triggers, human-in-loop checkpoints, and automation governance layers.",
+				"enabled": true,
+				"hoursSaved": 5,
+				"automation": 0.63,
+				"isAi": true
+			},
+			{
+				"code": "UC-0244-FLOW-001",
+				"useCaseCode": "UC-0244",
+				"displayName": "Audit Report Generation",
+				"description": "Generation of a draft internal audit report from information contained in documents.",
+				"enabled": true,
+				"hoursSaved": 10,
+				"automation": 0.83,
+				"isAi": true
+			},
+			{
+				"code": "UC-0606-FLOW-001",
+				"useCaseCode": "UC-0606",
+				"displayName": "Automation Solution Design Advisor",
+				"description": "Evaluates automation use cases and provides implementation roadmap including tools, integrations, and governance.",
+				"enabled": true,
+				"hoursSaved": 4,
+				"automation": 0.67,
+				"isAi": true
+			},
+			{
+				"code": "UC-0611-FLOW-001",
+				"useCaseCode": "UC-0611",
+				"displayName": "Cost-Benefit & ROI Modeling Engine",
+				"description": "Delivers financial analysis including payback period, NPV, ROI, and risk-adjusted savings from transformation. ",
+				"enabled": true,
+				"hoursSaved": 6,
+				"automation": 0.67,
+				"isAi": true
+			},
+			{
+				"code": "UC-0602-FLOW-001",
+				"useCaseCode": "UC-0602",
+				"displayName": "Cross-Functional Swimlane Mapper",
+				"description": "Develops swim lane charts documenting handoffs, roles, SLA ownership, and approvals across teams.",
+				"enabled": true,
+				"hoursSaved": 3,
+				"automation": 0.6,
+				"isAi": true
+			},
+			{
+				"code": "UC-0615-FLOW-001",
+				"useCaseCode": "UC-0615",
+				"displayName": "Document Bonuses Assistant",
+				"description": "Helps efficiently extracting information based on bonus-related documentation.",
+				"enabled": true,
+				"hoursSaved": 4,
+				"automation": 0.8,
+				"isAi": true
+			},
+			{
+				"code": "UC-0243-FLOW-001",
+				"useCaseCode": "UC-0243",
+				"displayName": "Document Compliance Verification",
+				"description": "Verification that documents comply with internal policies and regulations, identifying potential discrepancies and risks.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.29,
+				"isAi": true
+			},
+			{
+				"code": "UC-0601-FLOW-001",
+				"useCaseCode": "UC-0601",
+				"displayName": "End-to-End Workflow Architecture Designer",
+				"description": "Creates detailed task-level process maps with decision nodes, system touchpoints, data flow, and technical specs (BPMN aligned).",
+				"enabled": true,
+				"hoursSaved": 4,
+				"automation": 0.67,
+				"isAi": true
+			},
+			{
+				"code": "UC-0612-FLOW-001",
+				"useCaseCode": "UC-0612",
+				"displayName": "FTE Efficiency & Workforce Impact Planner",
+				"description": "Calculates FTE savings, redeployment potential, productivity uplift, and workforce transition scenarios.",
+				"enabled": true,
+				"hoursSaved": 5,
+				"automation": 0.63,
+				"isAi": true
+			},
+			{
+				"code": "UC-0613-FLOW-001",
+				"useCaseCode": "UC-0613",
+				"displayName": "Future Digital Agent Transformation Mapper",
+				"description": "Creates forward-looking process maps visualizing digital agents, human-AI collaboration, and future-state automation maturity.",
+				"enabled": true,
+				"hoursSaved": 4,
+				"automation": 0.67,
+				"isAi": true
+			},
+			{
+				"code": "UC-0607-FLOW-001",
+				"useCaseCode": "UC-0607",
+				"displayName": "Long-Term Process Sustainability Planner",
+				"description": "Designs long-term process strategy with continuous improvement loops and emerging tech adoption roadmap.",
+				"enabled": true,
+				"hoursSaved": 3,
+				"automation": 0.6,
+				"isAi": true
+			},
+			{
+				"code": "UC-0604-FLOW-001",
+				"useCaseCode": "UC-0604",
+				"displayName": "Manual vs Automated Execution Analyzer",
+				"description": "Identifies manual, semi-automated, and automated steps with feasibility and impact scoring.",
+				"enabled": true,
+				"hoursSaved": 5,
+				"automation": 0.63,
+				"isAi": true
+			},
+			{
+				"code": "UC-0603-FLOW-001",
+				"useCaseCode": "UC-0603",
+				"displayName": "Process Accountability High-Level Map",
+				"description": "Provides eagle-eye strategic process maps linking activities to business outcomes and KPIs.",
+				"enabled": true,
+				"hoursSaved": 3,
+				"automation": 0.6,
+				"isAi": true
+			},
+			{
+				"code": "UC-0609-FLOW-001",
+				"useCaseCode": "UC-0609",
+				"displayName": "Process Complexity & Risk Scoring Engine",
+				"description": "Analyzes decision density, exception rates, system dependencies, and assigns Low/Medium/High risk levels.",
+				"enabled": true,
+				"hoursSaved": 3,
+				"automation": 0.6,
+				"isAi": true
+			},
+			{
+				"code": "UC-0608-FLOW-001",
+				"useCaseCode": "UC-0608",
+				"displayName": "Process Re-engineering Impact Analyzer",
+				"description": "Assesses re-engineering potential, identifies bottlenecks, and delivers transformation recommendations with quantified impact.",
+				"enabled": true,
+				"hoursSaved": 5,
+				"automation": 0.63,
+				"isAi": true
+			},
+			{
+				"code": "UC-0605-FLOW-001",
+				"useCaseCode": "UC-0605",
+				"displayName": "Technology Landscape & Opportunity Scanner",
+				"description": "Identifies enterprise system optimization and integration opportunities with impact-benefit analysis.",
+				"enabled": true,
+				"hoursSaved": 4,
+				"automation": 0.57,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "CAAGS",
+		"displayName": "Code Automation & Generation Suite",
+		"description": "Evaluation of organizational processes and systems to ensure adherence to standards, identify areas of improvement, and maintain compliance with legal and regulatory obligations.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0495-FLOW-001",
+				"useCaseCode": "UC-0495",
+				"displayName": "DB or Swagger File Code Generation",
+				"description": "Create new functions or modules using contextual information from Swagger or databases. This accelerates development by ensuring consistency with existing structures and reducing manual coding effort.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0492-FLOW-001",
+				"useCaseCode": "UC-0492",
+				"displayName": "HTTP Request Make",
+				"description": "Make HTTP requests (GET, POST, PUT, DELETE) to interact with APIs, fetch remote data, or trigger processes. This involves handling authentication, request headers, payloads, and error management for robust communication.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0490-FLOW-001",
+				"useCaseCode": "UC-0490",
+				"displayName": "Query Data Read",
+				"description": "Execute complex SQL/noSQL queries to extract data for detailed reports. This involves filtering, sorting, joining multiple tables, and aggregating data efficiently, supporting data-driven decision-making processes.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0491-FLOW-001",
+				"useCaseCode": "UC-0491",
+				"displayName": "Query Data Write",
+				"description": "Perform bulk data insertions or updates, often required for reflecting processing outcomes or applying mass corrections. This includes transaction management, data integrity checks, and error handling for reliable updates.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0542-FLOW-001",
+				"useCaseCode": "UC-0542",
+				"displayName": "Sql Request Launcher",
+				"description": "[Agent Tool] Generates and executes SQL queries from natural language.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": true
+			},
+			{
+				"code": "UC-0493-FLOW-001",
+				"useCaseCode": "UC-0493",
+				"displayName": "SSH Request Make",
+				"description": "Establish SSH connections to remote servers, primarily to retrieve log files or execute maintenance scripts. This includes authentication (key or password), command execution, and secure data transfer protocols.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0494-FLOW-001",
+				"useCaseCode": "UC-0494",
+				"displayName": "Unit Test Generation",
+				"description": "Automatically generate unit tests based on code logic or API definitions. This ensures coverage for critical functions, validates expected outputs, and supports CI/CD pipelines for quality assurance.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			}
+		]
+	},
+	{
+		"code": "CAS",
+		"displayName": "Content Adaptation Services",
+		"description": "Exploit content in various formats through analysis, searches, summaries, transformations, etc.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0499-FLOW-001",
+				"useCaseCode": "UC-0499",
+				"displayName": "Data Format Transformation",
+				"description": "Converts data from one format to another, enabling compatibility between systems and helping to manage data and inforamtion.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.53,
+				"isAi": true
+			},
+			{
+				"code": "UC-0496-FLOW-001",
+				"useCaseCode": "UC-0496",
+				"displayName": "Document Comparison",
+				"description": "Comparison of several documents following certain criteria to find out how they differ",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.44,
+				"isAi": true
+			},
+			{
+				"code": "UC-0497-FLOW-001",
+				"useCaseCode": "UC-0497",
+				"displayName": "Document Data Extraction",
+				"description": "Extraction of certain data based on certain search criteria.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.44,
+				"isAi": true
+			},
+			{
+				"code": "UC-0152-FLOW-001",
+				"useCaseCode": "UC-0152",
+				"displayName": "Documents Insights Extraction",
+				"description": "Obtain the most relevant aspects based on a set of criteria from a group of documents.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": true
+			},
+			{
+				"code": "UC-0152-FLOW-002",
+				"useCaseCode": "UC-0152",
+				"displayName": "Documents Insights Extraction [Agent Tool]",
+				"description": "Obtain the most relevant aspects based on a set of criteria from a group of documents.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": true
+			},
+			{
+				"code": "UC-0498-FLOW-001",
+				"useCaseCode": "UC-0498",
+				"displayName": "Document Template Fill Up",
+				"description": "Insert specific data into predefined fields in a document template which helps to create of personalized documents, like letters, forms, etc.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.51,
+				"isAi": true
+			},
+			{
+				"code": "UC-0395-FLOW-001",
+				"useCaseCode": "UC-0395",
+				"displayName": "Document Validation",
+				"description": "Validate a document based on a set of criteria including document structure, brand guidelines, security compliance, legal compliance, and content coherence.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.42,
+				"isAi": true
+			},
+			{
+				"code": "UC-0141-FLOW-001",
+				"useCaseCode": "UC-0141",
+				"displayName": "Document Writer assistant",
+				"description": "It helps convert text according to different aspects (readability, tone, audience, etc.) and can generate different types (email, presentation, etc.).",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.5,
+				"isAi": true
+			},
+			{
+				"code": "UC-0141-FLOW-002",
+				"useCaseCode": "UC-0141",
+				"displayName": "Document Writer assistant",
+				"description": "Helps to convert text according to different aspects (readability, tone, audience, etc.) and can generate different types (email, presentation, etc.).",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.8,
+				"isAi": true
+			},
+			{
+				"code": "UC-0206-FLOW-001",
+				"useCaseCode": "UC-0206",
+				"displayName": "Image Text Extraction",
+				"description": "Extracts the text and words contained in an image.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.13,
+				"isAi": true
+			},
+			{
+				"code": "UC-0036-FLOW-001",
+				"useCaseCode": "UC-0036",
+				"displayName": "Summary Text Generation",
+				"description": "Generate summaries from documents.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.8,
+				"isAi": true
+			},
+			{
+				"code": "UC-0037-FLOW-001",
+				"useCaseCode": "UC-0037",
+				"displayName": "Text Translation",
+				"description": "Translation from any source language to any target language",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.8,
+				"isAi": true
+			},
+			{
+				"code": "UC-0227-FLOW-001",
+				"useCaseCode": "UC-0227",
+				"displayName": "Video Transcription Generation",
+				"description": "Generate a transcription from a video file.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "CONTROLL",
+		"displayName": "Controlling",
+		"description": "BSA area",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0569-FLOW-001",
+				"useCaseCode": "UC-0569",
+				"displayName": "Analytical Financial Extractor",
+				"description": "Process to validate documents from a PDF and export the general rules, to an Excel template.",
+				"enabled": true,
+				"hoursSaved": 2,
+				"automation": 0.33,
+				"isAi": true
+			},
+			{
+				"code": "UC-0598-FLOW-001",
+				"useCaseCode": "UC-0598",
+				"displayName": "Budget Error Reminder",
+				"description": "Detects excel errors on budgets and send reminder to its assignee",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.75,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "COS",
+		"displayName": "Corporate Security",
+		"description": "Strategies and initiatives focused on protecting corporate assets and information through risk assessment, policy enforcement, and threat mitigation to ensure a secure business environment.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0549-FLOW-001",
+				"useCaseCode": "UC-0549",
+				"displayName": "Information security Questions assistant",
+				"description": "Optimize the identification, evaluation and conformity of risk for safe strategic decisions on new business opportunities.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.33,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "CA",
+		"displayName": "Custom automation",
+		"description": "Custom automation developments with no Generative AI.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0518-FLOW-001",
+				"useCaseCode": "UC-0518",
+				"displayName": "Custom Process Automation",
+				"description": "Tailored automation tasks that do not fall under standard categories, such as integrating legacy systems or unique workflows. These are customized for specific business needs, increasing efficiency.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0524-FLOW-001",
+				"useCaseCode": "UC-0524",
+				"displayName": "Script Execution",
+				"description": "Execute pre-defined RPA scripts to automate interactions with graphical user interfaces. This includes launching applications, navigating menus, manipulating data fields, and capturing results, thereby streamlining repetitive tasks and enhancing operational efficiency with minimal human intervention.",
+				"enabled": true,
+				"hoursSaved": 8,
+				"automation": 1,
+				"isAi": false
+			}
+		]
+	},
+	{
+		"code": "DAAMS",
+		"displayName": "Data Analysis & Management Solutions",
+		"description": "Support in the use of data analysis tools and decision making.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0522-FLOW-001",
+				"useCaseCode": "UC-0522",
+				"displayName": "Capture Screenshot",
+				"description": "Capture screenshots of application interfaces or specific elements, useful for documentation, error logging, or monitoring changes.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0520-FLOW-001",
+				"useCaseCode": "UC-0520",
+				"displayName": "Click Button",
+				"description": "Automate clicking of buttons by recognizing button labels or positions, facilitating seamless task execution within applications.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0521-FLOW-001",
+				"useCaseCode": "UC-0521",
+				"displayName": "Enter Text",
+				"description": "Automatically input text into fields within applications, ensuring accuracy and efficiency in data entry tasks.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0574-FLOW-001",
+				"useCaseCode": "UC-0574",
+				"displayName": "Excel Report Summary Generation",
+				"description": "Generate summaries from excel reports files to derive key performance indicators, summarize trends, highlight breaches, and generate easy-to-consume visual insights.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.75,
+				"isAi": true
+			},
+			{
+				"code": "UC-0519-FLOW-001",
+				"useCaseCode": "UC-0519",
+				"displayName": "Find Image",
+				"description": "Identify and locate images on the screen, allowing for precise interaction with GUI elements based on visual recognition.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0552-FLOW-001",
+				"useCaseCode": "UC-0552",
+				"displayName": "Gantt Chart Generation",
+				"description": "Generation of a Gantt chart from an input listing the tasks of a project and their dependencies.",
+				"enabled": true,
+				"hoursSaved": 30,
+				"automation": 0.67,
+				"isAi": true
+			},
+			{
+				"code": "UC-0566-FLOW-001",
+				"useCaseCode": "UC-0566",
+				"displayName": "Kosin Jira Operations Execution",
+				"description": "[Agent Tool] Performs search/update/creation/addition of new or existing issues in Jira Kosin",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0600-FLOW-001",
+				"useCaseCode": "UC-0600",
+				"displayName": "Luntares - Jira Worklog Report Generation",
+				"description": "Generate a report based on all the worklog of Luntares (Jira) of a defined team and checks if there is errors in this data such as missing hours or missing vacation days. Also prepares calendar of vacations, compensated and festive in the same report.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.5,
+				"isAi": true
+			},
+			{
+				"code": "UC-0523-FLOW-001",
+				"useCaseCode": "UC-0523",
+				"displayName": "Scroll Page",
+				"description": "Automate scrolling actions to navigate through lengthy documents or webpages, enhancing accessibility to complete content.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0592-FLOW-001",
+				"useCaseCode": "UC-0592",
+				"displayName": "Student Exit Reasons Analysis",
+				"description": "Analyses the reasons why students pass their internship but do not convert into employees based on internship data from SharePoint-based Excel files to identify cases. The solution cross-references evaluation and status data, classifies exit reasons, and performs sentiment analysis on comments using AI. The output is a consolidated Excel report and a dashboard that provide actionable insights by business unit, location, and study type, supporting data-driven actions to improve student-to-junior conversion rates.",
+				"enabled": true,
+				"hoursSaved": 2,
+				"automation": 0.4,
+				"isAi": true
+			},
+			{
+				"code": "UC-0575-FLOW-001",
+				"useCaseCode": "UC-0575",
+				"displayName": "Volumes Case Forecast Generation",
+				"description": "Forecasts future case volumes based on historical data trends.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.5,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "DA",
+		"displayName": "Design Automation",
+		"description": "Visual interface design opportunities.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0573-FLOW-001",
+				"useCaseCode": "UC-0573",
+				"displayName": "SOP Flowchart Generation",
+				"description": "Generates a SOP (step-by-step) flowchart that helps improve understanding, ensures consistency, reduces errors, and improves productivity.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.5,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "DARM",
+		"displayName": "Documentation & Requirements Management",
+		"description": "Generate technical and functional documentation (in various formats) to improve knowledge management in projects.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0543-FLOW-001",
+				"useCaseCode": "UC-0543",
+				"displayName": "Agent Action Enhancer",
+				"description": "Autonomous system that interacts with its environment to perform tasks and achieve goals",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": true
+			},
+			{
+				"code": "UC-0593-FLOW-001",
+				"useCaseCode": "UC-0593",
+				"displayName": "Development Tasks Alignment Report Generation",
+				"description": "Generating tracking reports using GenAI for teams distributed across different time zones based on incurred tasks, commits, and functional documentation available in aXet Talk.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": true
+			},
+			{
+				"code": "UC-0578-FLOW-001",
+				"useCaseCode": "UC-0578",
+				"displayName": "Diagram Salesforce CPQ Product Generation",
+				"description": "Generate a diagram with Mermaid using AI of a product, to be able to see the full structure.",
+				"enabled": true,
+				"hoursSaved": 2,
+				"automation": 0.83,
+				"isAi": true
+			},
+			{
+				"code": "UC-0508-FLOW-001",
+				"useCaseCode": "UC-0508",
+				"displayName": "Email Composer",
+				"description": "Automatically generate email content using pre-designed HTML templates and dynamic variables. This ensures personalized communication, consistent branding, and reduces manual composition efforts.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0509-FLOW-001",
+				"useCaseCode": "UC-0509",
+				"displayName": "Email Sender",
+				"description": "Send emails securely via SMTP using authentication and encryption protocols. This ensures reliable delivery, tracking, and logging for compliance and communication management.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0564-FLOW-001",
+				"useCaseCode": "UC-0564",
+				"displayName": "Outlook Email Searcher",
+				"description": "[Agent Too] List emails from the Outlook Account (filtering by dates, subject, sender email, folder, category).",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0577-FLOW-001",
+				"useCaseCode": "UC-0577",
+				"displayName": "Salesforce CPQ Assessment Generation",
+				"description": "Generate a full assessment of a Salesforce CPQ Implementation that expose the catalog structure and provides recommendations and best practices about the solution implemented.",
+				"enabled": true,
+				"hoursSaved": 22,
+				"automation": 0.92,
+				"isAi": true
+			},
+			{
+				"code": "UC-0579-FLOW-001",
+				"useCaseCode": "UC-0579",
+				"displayName": "Structure Salesforce CPQ Catalog Generation",
+				"description": "Generate a document with the catalog structure of a Salesforce CPQ Implementation.",
+				"enabled": true,
+				"hoursSaved": 15,
+				"automation": 0.94,
+				"isAi": false
+			},
+			{
+				"code": "UC-0565-FLOW-001",
+				"useCaseCode": "UC-0565",
+				"displayName": "Web Information Seeker",
+				"description": "[Agent Tool] Performs open web online seach using search API to provide accurate and updated information",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0541-FLOW-001",
+				"useCaseCode": "UC-0541",
+				"displayName": "Website Information Seeker",
+				"description": "[Agent Tool] Perform content searches on one website indicated.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0541-FLOW-002",
+				"useCaseCode": "UC-0541",
+				"displayName": "Website Information Seeker",
+				"description": "[Agent Tool] Perform content searches on a group of websites indicated.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			}
+		]
+	},
+	{
+		"code": "EB",
+		"displayName": "Employer branding",
+		"description": "Solutions that enhance a company’s reputation as an employer by supporting initiatives related to employee engagement, culture promotion, and talent attraction.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0245-FLOW-001",
+				"useCaseCode": "UC-0245",
+				"displayName": "Candidate's Experience Measure",
+				"description": "Helps to measure the candidate's experience throughout the selection process.",
+				"enabled": true,
+				"hoursSaved": 4,
+				"automation": 0.95,
+				"isAi": true
+			},
+			{
+				"code": "UC-0246-FLOW-001",
+				"useCaseCode": "UC-0246",
+				"displayName": "Social Brand Analysis",
+				"description": "Analyze social listening data and assess the reputation of the employer brand, both its own and that of its competitors.",
+				"enabled": true,
+				"hoursSaved": 2,
+				"automation": 0.83,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "IT",
+		"displayName": "IT",
+		"description": "Solutions and tools that support the management, maintenance, and optimization of information technology systems, infrastructure, and services across the organization.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0547-FLOW-001",
+				"useCaseCode": "UC-0547",
+				"displayName": "Equipment purchase predictor",
+				"description": "Manage the stock of the various offices of Spain",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.5,
+				"isAi": false
+			}
+		]
+	},
+	{
+		"code": "KM",
+		"displayName": "Knowledge management",
+		"description": "Solutions that facilitate the capture, organization, sharing, and reuse of knowledge to improve collaboration, decision-making, and operational efficiency.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0510-FLOW-001",
+				"useCaseCode": "UC-0510",
+				"displayName": "Excel Reader",
+				"description": "Extract data from Excel sheets for processing or integration into workflows. This includes handling complex formulas, multi-sheet structures, and data validation to ensure accurate input processing.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0511-FLOW-001",
+				"useCaseCode": "UC-0511",
+				"displayName": "Excel Writer",
+				"description": "Generate reports or export data into Excel format with complex calculations and visualizations. This supports decision-making processes and data sharing with stakeholders in a familiar format.",
+				"enabled": true,
+				"hoursSaved": 2,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0517-FLOW-001",
+				"useCaseCode": "UC-0517",
+				"displayName": "File Downloader",
+				"description": "Download files from webpages by identifying image tags or background elements. It involves resolving URLs, managing storage, and maintaining image quality for reliable data acquisition.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0488-FLOW-001",
+				"useCaseCode": "UC-0488",
+				"displayName": "File Read",
+				"description": "Access local files, often to validate input data or configuration settings. It involves parsing data structures efficiently, managing temporary storage, and ensuring quick retrieval without significant resource consumption.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0488-FLOW-002",
+				"useCaseCode": "UC-0488",
+				"displayName": "File Read",
+				"description": "[Agent Tool] Access local files, often to validate input data or configuration settings. It involves parsing data structures efficiently, managing temporary storage, and ensuring quick retrieval without significant resource consumption.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0489-FLOW-001",
+				"useCaseCode": "UC-0489",
+				"displayName": "File Write",
+				"description": "Involves quick writing operations, proper file handling, and data validation for consistency across workflow stages.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0515-FLOW-001",
+				"useCaseCode": "UC-0515",
+				"displayName": "HTML Tables Extractor",
+				"description": "Scrape tabular data by accurately identifying HTML table structures. It includes handling nested tables, pagination, and data normalization for structured data extraction.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0581-FLOW-001",
+				"useCaseCode": "UC-0581",
+				"displayName": "Invitation Management",
+				"description": "Managing a client invitation to participate in a tender, from receiving it via email, registering it in JIRA, storing the tender documents, communicating it to the business, and registering it in SIC.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.6,
+				"isAi": true
+			},
+			{
+				"code": "UC-0516-FLOW-001",
+				"useCaseCode": "UC-0516",
+				"displayName": "JSON Extractor",
+				"description": "Retrieve JSON data from APIs or embedded scripts. This involves parsing complex JSON structures, handling authentication, and managing pagination for comprehensive data collection.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0506-FLOW-001",
+				"useCaseCode": "UC-0506",
+				"displayName": "PDF Reader",
+				"description": "Extract text or metadata from PDFs, including structured tables or complex layouts. It involves parsing document hierarchies, recognizing patterns, and maintaining format consistency for accurate data extraction.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0507-FLOW-001",
+				"useCaseCode": "UC-0507",
+				"displayName": "PDF Writer",
+				"description": "Generate PDFs for reports or documentation by formatting content with headers, tables, and images. This includes maintaining layout integrity, embedding fonts, and ensuring compatibility across PDF viewers.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0513-FLOW-001",
+				"useCaseCode": "UC-0513",
+				"displayName": "Web Images Extractor",
+				"description": "Download images from webpages by identifying image tags or background elements. It involves resolving URLs, managing storage, and maintaining image quality for reliable data acquisition.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0514-FLOW-001",
+				"useCaseCode": "UC-0514",
+				"displayName": "Web Links Extractor",
+				"description": "Collect hyperlinks from web pages to crawl interconnected sites. It involves parsing HTML structures, handling dynamic navigation, and filtering relevant URLs for efficient link extraction.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0512-FLOW-002",
+				"useCaseCode": "UC-0512",
+				"displayName": "Web Text Extractor",
+				"description": "[Agent Tool] Navigate through dynamic web pages to extract textual content. This involves managing sessions, handling JavaScript rendering, and implementing scraping techniques to ensure data accuracy.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0512-FLOW-001",
+				"useCaseCode": "UC-0512",
+				"displayName": "Web Text Extractor",
+				"description": "Navigate through dynamic web pages to extract textual content. This involves managing sessions, handling JavaScript rendering, and implementing scraping techniques to ensure data accuracy.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			}
+		]
+	},
+	{
+		"code": "LABOUR",
+		"displayName": "Labour",
+		"description": "Solutions that assist with workforce-related processes such as labor management, compliance, contracts, and employee relations within organizational and legal frameworks.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0563-FLOW-001",
+				"useCaseCode": "UC-0563",
+				"displayName": "Contracts Documents Extractor",
+				"description": "Analize document for extracting and analizing based on rules specified by client.",
+				"enabled": true,
+				"hoursSaved": 5,
+				"automation": 0.63,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "LEGAL",
+		"displayName": "Legal",
+		"description": "Tools and services that support legal activities, including contract analysis, regulatory compliance, legal research, and document generation.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0570-FLOW-001",
+				"useCaseCode": "UC-0570",
+				"displayName": "Legal Contract & Clauses Compare",
+				"description": "Process to validate and/or compare clauses between contracts.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.33,
+				"isAi": true
+			},
+			{
+				"code": "UC-0571-FLOW-001",
+				"useCaseCode": "UC-0571",
+				"displayName": "Various Formats Plan Generation",
+				"description": "Process that from an Excel, extracts information to generate a report and a template -based report, and then create an Excel to complete a template.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.25,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "MARKETING",
+		"displayName": "Marketing",
+		"description": "Tools and solutions that support marketing strategies and activities, including content creation, campaign management, market analysis, and customer engagement.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0231-FLOW-001",
+				"useCaseCode": "UC-0231",
+				"displayName": "Image Search",
+				"description": "Searches for images in a repository that meet certain criteria.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.33,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "PEOPLE",
+		"displayName": "People",
+		"description": "Improving various aspects of human resources management",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0562-FLOW-001",
+				"useCaseCode": "UC-0562",
+				"displayName": "Doubt Mail Answer Assistant",
+				"description": "Analize a doubt from an email with information from attached and RAG documents to find an answer.",
+				"enabled": true,
+				"hoursSaved": 3,
+				"automation": 0.6,
+				"isAi": true
+			},
+			{
+				"code": "UC-0591-FLOW-001",
+				"useCaseCode": "UC-0591",
+				"displayName": "Entity Onboarding Asistant",
+				"description": "Assitant chatbot embedded which guides new employees through a personalized checklist based on role, country, and business unit (in Entity and accessible via Microsoft Teams).",
+				"enabled": true,
+				"hoursSaved": 2,
+				"automation": 0.67,
+				"isAi": true
+			},
+			{
+				"code": "UC-0597-FLOW-001",
+				"useCaseCode": "UC-0597",
+				"displayName": "Exit Interview Assistant",
+				"description": "Analyses an exit interview transcript for getting a report about the reasons of why the employee is exiting the company",
+				"enabled": true,
+				"hoursSaved": 2,
+				"automation": 0.67,
+				"isAi": true
+			},
+			{
+				"code": "UC-0559-FLOW-001",
+				"useCaseCode": "UC-0559",
+				"displayName": "Extractor assistant",
+				"description": "An assistant that helps users to response with assistant customize.",
+				"enabled": true,
+				"hoursSaved": 8,
+				"automation": 0.5,
+				"isAi": true
+			},
+			{
+				"code": "UC-0560-FLOW-001",
+				"useCaseCode": "UC-0560",
+				"displayName": "Forms Language Processor",
+				"description": "Analysis of text answers on forms for data visualitation.",
+				"enabled": true,
+				"hoursSaved": 8,
+				"automation": 0.8,
+				"isAi": true
+			},
+			{
+				"code": "UC-0556-FLOW-001",
+				"useCaseCode": "UC-0556",
+				"displayName": "Organizations Changes Assistant",
+				"description": "Compensation and organizational changes.",
+				"enabled": true,
+				"hoursSaved": 5,
+				"automation": 0.42,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "PRASH",
+		"displayName": "Problem Resolution & Support Hub",
+		"description": "Incident and problem management and troubleshooting",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0484-FLOW-001",
+				"useCaseCode": "UC-0484",
+				"displayName": "Jira SubTask Read",
+				"description": "Send an HTTP request (RESTful or SOAP) to create or update a task in a service management platform. This involves formatting payloads correctly, validating input data, and confirming successful execution. It ensures workflow continuity and proper documentation.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0485-FLOW-001",
+				"useCaseCode": "UC-0485",
+				"displayName": "Jira SubTask Write",
+				"description": "Create or update subtasks through HTTP requests, ensuring logical linkage with parent tasks. This involves payload validation, accurate status updates, and confirmation checks to maintain task hierarchy and workflow integrity.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0482-FLOW-001",
+				"useCaseCode": "UC-0482",
+				"displayName": "Jira Task Read",
+				"description": "Perform an HTTP request (RESTful or SOAP) to retrieve detailed task information from a service management system. This includes fetching task status, assigned users, and historical logs, ensuring data accuracy and consistency for reporting or follow-up actions.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0483-FLOW-001",
+				"useCaseCode": "UC-0483",
+				"displayName": "Jira Task Write",
+				"description": "Send an HTTP request (RESTful or SOAP) to create or update a task in a service management platform. This involves formatting payloads correctly, validating input data, and confirming successful execution. It ensures workflow continuity and proper documentation.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0486-FLOW-001",
+				"useCaseCode": "UC-0486",
+				"displayName": "Jira Worklog Read",
+				"description": "Access worklog details via RESTful or SOAP calls, typically to monitor time spent on tasks. This includes retrieving descriptions, timestamps, and user entries, which aids in productivity tracking and billing.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			},
+			{
+				"code": "UC-0487-FLOW-001",
+				"useCaseCode": "UC-0487",
+				"displayName": "Jira Worklog Write",
+				"description": "Log work entries by sending HTTP requests to update time tracking systems. This ensures accurate logging of hours, detailed descriptions, and synchronization with task statuses for precise project accounting.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": false
+			}
+		]
+	},
+	{
+		"code": "PROCUREMEN",
+		"displayName": "Procurement",
+		"description": "Solutions that streamline and support purchasing processes, supplier management, contract handling, and cost control.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0548-FLOW-001",
+				"useCaseCode": "UC-0548",
+				"displayName": "Analytical-Financial Transfers",
+				"description": "Monthly process to consolidate and send costs, between projects, to responsible teams, with specific dates for each email through shipping or tickets",
+				"enabled": true,
+				"hoursSaved": 2,
+				"automation": 0.33,
+				"isAi": true
+			},
+			{
+				"code": "UC-0232-FLOW-001",
+				"useCaseCode": "UC-0232",
+				"displayName": "Order Creation assistant",
+				"description": "Helps employees generate orders for materials and services in Ariba application.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.25,
+				"isAi": true
+			},
+			{
+				"code": "UC-0233-FLOW-001",
+				"useCaseCode": "UC-0233",
+				"displayName": "Order Creation Validation",
+				"description": "Validates an employee's orders for materials and services in Ariba application.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.45,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "QA",
+		"displayName": "Quality Assurance",
+		"description": "Generation and support of any type of code and application testing (functional, unit, integration, performance).",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0154-FLOW-001",
+				"useCaseCode": "UC-0154",
+				"displayName": "Test Cases Generation",
+				"description": "Create test cases based on code and requirements, improving test coverage and reducing development time.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.96,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "RS",
+		"displayName": "Real State",
+		"description": "Solutions that support real estate operations, including property management, investment analysis, lease administration, and market evaluation.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0237-FLOW-001",
+				"useCaseCode": "UC-0237",
+				"displayName": "Building Contracts Validation",
+				"description": "Validates building and office rental contracts.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.45,
+				"isAi": true
+			},
+			{
+				"code": "UC-0561-FLOW-001",
+				"useCaseCode": "UC-0561",
+				"displayName": "Office Expenses Forecast Predictor",
+				"description": "Analysis of actual office expenses for predicting future expenses",
+				"enabled": true,
+				"hoursSaved": 11,
+				"automation": 0.73,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "RECRUITING",
+		"displayName": "Recruiting",
+		"description": "Services focused on attracting, sourcing, and hiring top talent, including recruitment strategies, candidate screening, and interview processes.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0242-FLOW-001",
+				"useCaseCode": "UC-0242",
+				"displayName": "Final Recruitment Improve",
+				"description": "Improvement in the final part of the process for the final assessment of a candidate.",
+				"enabled": true,
+				"hoursSaved": 13,
+				"automation": 1.9,
+				"isAi": true
+			},
+			{
+				"code": "UC-0557-FLOW-001",
+				"useCaseCode": "UC-0557",
+				"displayName": "Job Candidates Evaluation",
+				"description": "Hiring based on interview transcripts.",
+				"enabled": true,
+				"hoursSaved": 4,
+				"automation": 0.29,
+				"isAi": true
+			},
+			{
+				"code": "UC-0599-FLOW-001",
+				"useCaseCode": "UC-0599",
+				"displayName": "Mail Answer Draft Generation",
+				"description": "Suggest answers as draft from not read mails in a shared mailbox by using RAG.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.6,
+				"isAi": true
+			},
+			{
+				"code": "UC-0544-FLOW-001",
+				"useCaseCode": "UC-0544",
+				"displayName": "SAP Subcontractor Order Management",
+				"description": "Manages information on new subcontractors. Automates integration into SAP and acts as a database manager to manage information.",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 0.1,
+				"isAi": false
+			}
+		]
+	},
+	{
+		"code": "RA",
+		"displayName": "Role-adaptive Assistance",
+		"description": "Assistant system that can adapt to different roles, providing personalized and relevant assistance according to the needs and functions of each role.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0555-FLOW-001",
+				"useCaseCode": "UC-0555",
+				"displayName": "Entity Chatbot",
+				"description": "BSA Chatbot Orchestrator for FAQs",
+				"enabled": true,
+				"hoursSaved": 0,
+				"automation": 1,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "SUSTA",
+		"displayName": "Sustainability",
+		"description": "Sustainability Area of BSA",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0584-FLOW-001",
+				"useCaseCode": "UC-0584",
+				"displayName": "Sustainability Questions Assitant",
+				"description": "Helps in resolving questions about the sustainability (sustainability, environment, ethics) of a company based on a set of documents.",
+				"enabled": true,
+				"hoursSaved": 1,
+				"automation": 0.75,
+				"isAi": true
+			}
+		]
+	},
+	{
+		"code": "UNIVERSITY",
+		"displayName": "University",
+		"description": "Tools and solutions that support platform for employee training and development.",
+		"icon": null,
+		"useCases": [
+			{
+				"code": "UC-0572-FLOW-001",
+				"useCaseCode": "UC-0572",
+				"displayName": "Friendly Course Reminder",
+				"description": "Automation of the process of confirming attendance to courses, preventing the team from manually contacting each participant.",
+				"enabled": true,
+				"hoursSaved": 6,
+				"automation": 0.75,
+				"isAi": true
+			}
+		]
+	}
+]
