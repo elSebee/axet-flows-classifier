@@ -41,17 +41,18 @@ def main():
         vector_db.load(USECASES_DB_PATH)
         print(f"[*] VectorDB cargada. {len(vector_db.metadata)} Casos de Uso listos para mapeo.")
 
-        # Capa 2: Extracción de Trazas (Si no existen, las generamos)
-        print("\n[Módulo: GraphEngine] Cargando trazas estáticas...")
-        if not os.path.exists(STATIC_TRACES_PATH):
-            print("[*] No se encontró el archivo de trazas, generándolo ahora...")
-            tracer = FlowGraphTracer(FLOW_JSON_PATH)
-            tracer.export_paths_to_json(STATIC_TRACES_PATH)
+        # Capa 2: Extracción de Trazas (regeneramos para capturar nuevos metadatos)
+        print("\n[Módulo: GraphEngine] Generando trazas estáticas enriquecidas...")
+        tracer = FlowGraphTracer(FLOW_JSON_PATH)
+        tracer.export_paths_to_json(STATIC_TRACES_PATH, flow_json_path=FLOW_JSON_PATH)
             
         with open(STATIC_TRACES_PATH, 'r', encoding='utf-8') as f:
             traces_data = json.load(f)
         caminos = traces_data.get("Caminos", [])
+        flow_metadata = traces_data.get("flowMetadata", {})
         print(f"[*] {len(caminos)} Trazas estáticas cargadas.")
+        if flow_metadata.get('flowName'):
+            print(f"[*] Flujo: '{flow_metadata['flowName']}' (Owner: {flow_metadata.get('ownerEmail','?')})")
 
         # Capa 3: Hidratación e Inferencia (SLM)
         print("\n[Módulo: SLM Inference] Inicializando summarizer e hidratando trazas...")
@@ -75,7 +76,7 @@ def main():
             print(f"[{idx+1}/{len(trazas_a_procesar)}] Procesando {trace_id}...", end=" ", flush=True)
             
             # 3.1: Generar Prompt
-            sys_p, user_p = summarizer.generate_master_prompt(traza)
+            sys_p, user_p = summarizer.generate_master_prompt(traza, flow_metadata)
             
             # 3.2: Inferencia SLM
             output = summarizer.run_inference(sys_p, user_p, MODEL_PATH)

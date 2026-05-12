@@ -62,7 +62,30 @@ class TraceSummarizer:
                     continue
         return events
 
-    def hydrate_trace(self, static_trace: dict) -> str:
+    # Mapeo de propiedades técnicas a etiquetas legibles para el SLM
+    PROP_LABELS = {
+        'url': 'API Endpoint',
+        'method': 'HTTP Method',
+        'command': 'System Command',
+        'query': 'Database Query',
+        'func': 'Function Logic',
+        'action': 'UI Action',
+        'property': 'Data Binding',
+        'dbName': 'Database/Collection',
+        'message': 'UI Message',
+        'associatedEntityMetamodel': 'Business Entity',
+        'associatedEntityFormType': 'Form Type',
+        'bindingProperty': 'Data Source',
+        'sortProperty': 'Sort Order',
+        'credentialname': 'Integration Credential',
+        'table': 'Database Table',
+        'database': 'Database Name',
+        'topic': 'Message Topic',
+        'rules': 'Routing Rules',
+        'paginator': 'Pagination',
+    }
+
+    def hydrate_trace(self, static_trace: dict, flow_metadata: dict = None) -> str:
         """
         Toma una Traza Estática y la combina con muestras de logs reales.
         Retorna el Prompt Maestro listo para el SLM.
@@ -71,40 +94,57 @@ class TraceSummarizer:
         nodos = static_trace.get("Nodos", [])
         
         prompt_parts = []
-        prompt_parts.append(f"TRACE ID: {trace_id}")
-        prompt_parts.append("SEQUENCE OF NODES AND LOG EXAMPLES:")
         
-        for i, nodo_dict in enumerate(nodos):
-            # Extraer las propiedades si existen (viene del nuevo export)
+        # Header con metadata del flujo
+        if flow_metadata and flow_metadata.get('flowName'):
+            prompt_parts.append(f"APPLICATION: {flow_metadata['flowName']}")
+        prompt_parts.append(f"TRACE ID: {trace_id}")
+        prompt_parts.append(f"TOTAL STEPS: {len(nodos)}")
+        prompt_parts.append("EXECUTION PATH:")
+        
+        for i, nodo_dict_original in enumerate(nodos):
+            # Trabajar con una copia para no mutar la traza original
+            nodo_dict = dict(nodo_dict_original)
             props = nodo_dict.pop('props', None)
+            link_context = nodo_dict.pop('linkContext', None)
             
             # Formato esperado: {"Nombre del Nodo": "id_del_nodo"}
             for node_name, node_id in nodo_dict.items():
+                if not isinstance(node_id, str):
+                    continue
                 step_info = f"Step {i+1}: [{node_name}] (ID: {node_id})"
                 
+                # Contexto de link in/out resuelto
+                if link_context:
+                    step_info += f"\n  - Connected to: {link_context}"
+                
                 if props:
-                    # Mostrar las configuraciones clave del nodo
-                    props_str = ", ".join([f"{k}: '{v}'" for k, v in props.items()])
-                    step_info += f"\n  - Node Configuration: {props_str}"
+                    # Mostrar las configuraciones con etiquetas legibles
+                    labeled_props = []
+                    for k, v in props.items():
+                        label = self.PROP_LABELS.get(k, k)
+                        # Truncar funciones largas a lo esencial
+                        if k == 'func' and len(str(v)) > 80:
+                            v = str(v)[:80] + '...'
+                        labeled_props.append(f"{label}: '{v}'")
+                    step_info += f"\n  - Config: {', '.join(labeled_props)}"
                 
                 # Buscar muestras de logs para este nodo
                 log_samples = self.events_by_node.get(node_id, [])
                 if log_samples:
                     samples = " | ".join(log_samples[:3])
-                    step_info += f"\n  - Real execution log: \"{samples}\""
-                else:
-                    step_info += f"\n  - Real execution log: (No dynamic data available)"
+                    step_info += f"\n  - Runtime log: \"{samples}\""
                     
                 prompt_parts.append(step_info)
                 
         return "\n".join(prompt_parts)
 
-    def generate_master_prompt(self, static_trace: dict) -> tuple:
+    def generate_master_prompt(self, static_trace: dict, flow_metadata: dict = None) -> tuple:
         """
         Construye el prompt final con las instrucciones para el SLM.
         Retorna (system_prompt, user_prompt) para usar con Chat Completion.
         """
-        hydrated_data = self.hydrate_trace(static_trace)
+        hydrated_data = self.hydrate_trace(static_trace, flow_metadata)
         
         system_prompt = """You are a Senior Business Analyst and Software Architect at NTT DATA.
 Your task is to analyze a "Trace" (an execution path of a Node-RED workflow) and deduce its business use case.
