@@ -28,10 +28,15 @@ class FlowGraphTracer:
             
             # Guardamos info relevante para el prompt
             raw_name = node.get('name') or node.get('label') or ''
+            # Extraer propiedades interesantes para el SLM
+            interesting_keys = ['url', 'method', 'command', 'query', 'topic', 'func', 'rules', 'property', 'action', 'table', 'database']
+            props = {k: str(node[k])[:150] for k in interesting_keys if k in node and node[k]}
+            
             self.nodes[nid] = {
                 'id': nid,
                 'type': node.get('type', 'unknown'),
-                'name': str(raw_name).strip() if raw_name else ''
+                'name': str(raw_name).strip() if raw_name else '',
+                'props': props
             }
             
             if nid not in self.in_degree:
@@ -122,7 +127,10 @@ class FlowGraphTracer:
             for nid in path:
                 info = self.nodes[nid]
                 nombre = info['name'] if info['name'] else f"[{info['type']}]"
-                nodos_list.append({nombre: nid})
+                nodo_dict = {nombre: nid}
+                if info.get('props'):
+                    nodo_dict['props'] = info['props']
+                nodos_list.append(nodo_dict)
                 
             caminos_json.append({
                 "id": f"trace_{i+1:04d}",

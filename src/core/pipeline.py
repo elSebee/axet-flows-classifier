@@ -84,26 +84,51 @@ def main():
             trace_result = {
                 "trace_id": trace_id,
                 "nodos": len(traza.get("Nodos", [])),
+                "trace_type": "Unknown",
+                "reasoning": "",
                 "slm_use_case_name": "",
                 "slm_business_context": "",
-                "top_matches": []
+                "top_matches": [],
+                "status": "Unmapped"
             }
             
             try:
-                clean_json = re.sub(r"```json|```", "", output).strip()
+                # Extraer solo el bloque JSON por si el SLM responde con texto extra
+                json_match = re.search(r'\{.*\}', output, re.DOTALL)
+                if json_match:
+                    clean_json = json_match.group(0)
+                else:
+                    clean_json = re.sub(r"```json|```", "", output).strip()
+                    
                 data = json.loads(clean_json)
+                trace_type = data.get('traceType', 'Unknown')
+                reasoning = data.get('reasoning', '')
                 business_context = data.get('businessContext', '')
                 use_case_name = data.get('useCaseName', '')
                 
+                trace_result["trace_type"] = trace_type
+                trace_result["reasoning"] = reasoning
                 trace_result["slm_use_case_name"] = use_case_name
                 trace_result["slm_business_context"] = business_context
                 
-                if business_context:
-                    # Capa 4: Semantic Search en Vector DB
+                # Capa 4: Semantic Router & Vector Search
+                if trace_type == "BusinessLogic" and business_context:
                     matches = vector_db.search(business_context, top_k=3) # Top 3 matches
-                    trace_result["top_matches"] = matches
                     
-                print(f"OK ({len(trace_result['top_matches'])} matches)")
+                    # Thresholding: Solo mantener matches por encima de 0.65
+                    valid_matches = [m for m in matches if m.get("score", 0) >= 0.65]
+                    trace_result["top_matches"] = valid_matches
+                    
+                    if valid_matches:
+                        trace_result["status"] = "Mapped to Catalog"
+                        print(f"OK (BusinessLogic: {len(valid_matches)} matches válidos)")
+                    else:
+                        trace_result["status"] = "Low Confidence / Requires Human Review"
+                        print(f"OK (BusinessLogic: No matches > 0.65)")
+                else:
+                    # Es TechnicalInfrastructure o ErrorHandling, nos saltamos la base de datos
+                    trace_result["status"] = "System Overhead (Non-billable)"
+                    print(f"OK (Skipped VectorDB: {trace_type})")
                 
             except Exception as e:
                 print(f"ERROR: No se pudo parsear el JSON del SLM.")

@@ -27,14 +27,28 @@ class TraceSummarizer:
                 if not line.strip(): continue
                 try:
                     source = json.loads(line)
+                    
+                    # 1. Extraer Node ID
                     node_info = source.get("node") or source.get("sourceNode")
+                    event_info = source.get("event", {})
                     node_id = None
+                    
                     if isinstance(node_info, dict):
                         node_id = node_info.get("id")
                     elif isinstance(node_info, str):
                         node_id = node_info
+                    
+                    if not node_id and isinstance(event_info, dict):
+                        node_id = event_info.get("nodeid")
                         
+                    # 2. Extraer Mensaje o Payload
                     msg = source.get("msg", "")
+                    if not msg:
+                        # Si no hay msg, buscar payload o el tipo de evento
+                        if "payload" in source:
+                            msg = str(source["payload"])
+                        elif isinstance(event_info, dict) and "value" in event_info:
+                            msg = event_info.get("value")
                     
                     if node_id and msg and "Connect Timeout Error" not in str(msg):
                         # Limpiar un poco el msg
@@ -61,14 +75,21 @@ class TraceSummarizer:
         prompt_parts.append("SEQUENCE OF NODES AND LOG EXAMPLES:")
         
         for i, nodo_dict in enumerate(nodos):
+            # Extraer las propiedades si existen (viene del nuevo export)
+            props = nodo_dict.pop('props', None)
+            
             # Formato esperado: {"Nombre del Nodo": "id_del_nodo"}
             for node_name, node_id in nodo_dict.items():
                 step_info = f"Step {i+1}: [{node_name}] (ID: {node_id})"
                 
+                if props:
+                    # Mostrar las configuraciones clave del nodo
+                    props_str = ", ".join([f"{k}: '{v}'" for k, v in props.items()])
+                    step_info += f"\n  - Node Configuration: {props_str}"
+                
                 # Buscar muestras de logs para este nodo
                 log_samples = self.events_by_node.get(node_id, [])
                 if log_samples:
-                    # Tomar máximo 3 muestras para dar contexto sin saturar la ventana
                     samples = " | ".join(log_samples[:3])
                     step_info += f"\n  - Real execution log: \"{samples}\""
                 else:
@@ -87,13 +108,20 @@ class TraceSummarizer:
         
         system_prompt = """You are a Senior Business Analyst and Software Architect at NTT DATA.
 Your task is to analyze a "Trace" (an execution path of a Node-RED workflow) and deduce its business use case.
-The Trace contains a sequence of nodes (some with technical names) and real execution logs that show what data was processed.
+The Trace contains a sequence of nodes, their configurations, and real execution logs.
 
-Based on this technical sequence and the log samples, provide a business description of what this workflow path achieves.
-Your description should sound like an item in a corporate service catalog (e.g., "Generates an audit report from documents" or "Authenticates a user and queries Okta").
+First, classify the trace into one of these categories:
+- 'BusinessLogic': Actual business steps like processing orders, invoices, DB inserts, or data extraction.
+- 'TechnicalInfrastructure': Setup nodes, global settings, cache clearing, or utility links.
+- 'ErrorHandling': Catching errors or logging failures.
+
+Based on the technical sequence, configurations, and logs, provide a business description of what this workflow path achieves.
+Your description should sound like an item in a corporate service catalog.
 
 Respond ONLY with a valid JSON using this strict format:
 {
+  "traceType": "BusinessLogic | TechnicalInfrastructure | ErrorHandling",
+  "reasoning": "Step-by-step logic explaining your classification and business context...",
   "useCaseName": "A short, descriptive name (max 5 words)",
   "businessContext": "A clear, 1-2 sentence description of the business purpose and action performed."
 }
@@ -113,8 +141,9 @@ Analyze the sequence and logs above. Return the JSON. Do not include markdown fo
             print(f"[*] Inicializando SLM en memoria desde {os.path.basename(model_path)} (solo se hará una vez)...")
             self.llm = Llama(
                 model_path=model_path,
-                n_ctx=2048,
-                n_threads=4,
+                n_ctx=2560,  # Reducido desde 4096 para mejorar velocidad, suficiente para la traza más larga (2161)
+                n_batch=512, # Procesamiento por lotes más grande para acelerar la ingesta del prompt
+                n_threads=4, # Ideal para CPUs estándar de WSL
                 verbose=False
             )
         
