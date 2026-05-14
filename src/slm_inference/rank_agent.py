@@ -24,13 +24,14 @@ class RankAgent:
     """
 
     SYSTEM_PROMPT = """You are a Senior IT Auditor at NTT DATA.
-Your task is to analyze a business context extracted from a Node-RED workflow trace, and select the BEST MATCH from a list of 5 potential Use Case candidates retrieved by a vector search.
+Your task is to analyze a business context extracted from a Node-RED workflow trace, and select the BEST MATCH from a provided list of Use Case candidates retrieved by a semantic search.
 
 Read the [BUSINESS CONTEXT] carefully, then evaluate each [CANDIDATE]. 
 Select the single candidate that perfectly describes the business operation being performed.
+CRITICAL RULE: If none of the candidates are a good match, or if you realize the trace does not actually provide real business value (e.g., it's just infrastructure or logging), you MUST select "NONE" as the selectedUseCase.
 
 OUTPUT FORMAT - Respond ONLY with valid JSON, no markdown, no extra text:
-{"selectedUseCase": "UC-CODE", "confidence": "High|Medium|Low", "justification": "Detailed explanation of why this use case is the best match and why the others were rejected."}"""
+{"selectedUseCase": "UC-CODE or NONE", "confidence": "High|Medium|Low", "justification": "Detailed explanation of why this use case is the best match and why others were rejected, or why you selected NONE."}"""
 
     def __init__(self, llm_instance: Llama):
         """
@@ -75,7 +76,7 @@ OUTPUT FORMAT - Respond ONLY with valid JSON, no markdown, no extra text:
                     {"role": "user", "content": user_prompt}
                 ],
                 temperature=0.1,
-                max_tokens=250,
+                max_tokens=400,
             )
             raw_output = response["choices"][0]["message"]["content"]
             
