@@ -65,7 +65,7 @@ class VectorDatabase:
                     "embedded_text": text_to_embed
                 })
 
-        print(f"[*] Generando embeddings para {len(documents_to_embed)} Casos de Uso con jina-v3...")
+        print(f"[*] Generando embeddings para {len(documents_to_embed)} Casos de Uso con BGE-Small...")
         
         # 2. Generar Embeddings (FastEmbed usa ONNX, muy rápido en CPU)
         # embedding_model.embed() devuelve un generador, lo convertimos a lista y luego a numpy array
@@ -124,7 +124,7 @@ if __name__ == "__main__":
     load_dotenv()
     
     # Script ejecutable para construir la DB inicial
-    print("=== AXET Classifier: Generador de Vectores ===")
+    print("=== aXet.flows Classifier: Generador de Vectores ===")
     
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     use_cases_path = os.path.join(base_dir, os.getenv("USE_CASES_FILE", "data/raw/use_cases/useCases.json"))
